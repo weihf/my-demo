@@ -1,0 +1,53 @@
+body {
+	font-family: "microsoft yahei";
+	background: url(../img/bg.png);
+	color: #484441;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+#header {
+	font-size: 30px;
+	text-align: center;
+	margin: 20px auto;
+}
+
+#content {
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	background: white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#tool {
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+#tool dd {
+	flex-grow: 1;
+	background: url(../img/mesh.png) repeat;
+	padding: 10px;
+	color: #eee;
+}
+
+#tool dd a {
+	color: #fff;
+	margin: 0 5px;
+}
+
+#tool dd a:hover {
+	color: white;
+}
+
+#tool dd h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+#tool dd:last-child {
+	border: none;
+}
+
+#tool h2 {}

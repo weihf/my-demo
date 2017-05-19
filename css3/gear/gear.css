@@ -1,0 +1,118 @@
+.container {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mask {
+	width: 150px;
+	height: 150px;
+	background: transparent;
+	border-radius: 100%;
+	box-shadow: 0px 0px 0px 1000px rgba(255, 255, 255, 0.67), 0px 0px 19px 0px rgba(0, 0, 0, 0.16) inset;
+	position: absolute;
+	top: 140px;
+	left: -30px;
+	z-index: 999;
+}
+
+.gears {
+	position: absolute;
+}
+
+.gear {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	margin: 100px auto;
+	animation: rotate 10s infinite linear;
+	transform-origin: center center;
+}
+
+.gear:nth-of-type(2) {
+	position: relative;
+	left: -40px;
+	top: -60px;
+	width: 80px;
+	height: 80px;
+}
+
+.gear:nth-of-type(2) .square {
+	width: 80px;
+	height: 80px;
+	background: lightblue;
+}
+
+.gear:nth-of-type(2) .circle {
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+}
+
+.gear:nth-of-type(3) {
+	position: relative;
+	left: 60px;
+	top: -260px;
+	width: 60px;
+	height: 60px;
+}
+
+.gear:nth-of-type(3) .square {
+	width: 60px;
+	height: 60px;
+	background: gold;
+}
+
+.gear:nth-of-type(3) .circle {
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	margin-left: -15px;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.square {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	background: lightcoral;
+	border-radius: 5px;
+
+}
+
+.square:nth-of-type(1) {
+	transform: rotate(30deg);
+}
+
+.square:nth-of-type(2) {
+	transform: rotate(60deg);
+}
+
+.square:nth-of-type(3) {
+	transform: rotate(90deg);
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="reset.css" />
+		<style>
+			body {
+				background: url(bg.png) repeat;
+				color: #484441;
+				text-shadow: 1px 1px 1px #fff;
+				font-size: 14px;
+			}
+			
+			.jumpBall {
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			#scope {
+				color: red;
+			}
+			
+			canvas {
+				margin: 10px auto;
+			}
+			
+			.btns {
+				text-align: center;
+				margin: 20px auto;
+			}
+			
+			.btns input {
+				background: url(mesh.png);
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				color: white;
+				padding: 0 20px;
+				margin: 10px;
+				border-radius: 20px;
+				cursor: pointer;
+				text-shadow: 1px 1px 1px #fff;
+				box-shadow: 0 0 3px #fff;
+				border: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="jumpBall">
+			<div class="btns">
+				<input type="button" value="start" id="start" />
+				<input type="button" value="stop" id="stop" />
+			</div>
+			<canvas width="320" height="240" id="canvas"></canvas>
+			<p>你已经接住 <span id="scope">0</span> 个球了！</p>
+		</div>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas"),
+				start = document.getElementById("start"),
+				stop = document.getElementById("stop"),
+				scope = document.getElementById("scope"),
+				context = canvas.getContext("2d"),
+				boardX = canvas.width / 2,
+				num = 0,
+				angle, x, y, jump;
+			init();
+			start.onclick = function() {
+				clear();
+				canvas.addEventListener("mousemove", function(event) {
+					boardX = Math.min(Math.max(event.pageX - canvas.offsetLeft, 30), canvas.width - 30); //将板子的活动范围限定在canvas之内
+				}, false);
+				clearInterval(jump);
+				jump = setInterval("ball()", 20);
+			}
+
+			stop.onclick = function() {
+				clearInterval(jump);
+			}
+
+			function init() {
+				scope.innerHTML = num;
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.strokeRect(0, 0, canvas.width, canvas.height);
+				context.beginPath();
+				context.arc(x, y, 10, 0, 2 * Math.PI);
+				context.fill();
+				context.fillRect(boardX - 30, canvas.height - 10, 60, 10);
+			}
+
+			function ball() {
+				x = Math.min(Math.max(x + Math.cos(angle) * 8, 10), canvas.width - 10);
+				y = Math.min(Math.max(y + Math.sin(angle) * 8, 10), canvas.height + 10);
+				if (y + 10 >= canvas.height - 10 && x >= boardX - 30 && x <= boardX + 30) { 
+					y = canvas.height - 20;
+					angle = (x - boardX + 30) / 60 * Math.PI / 3 * 2 + Math.PI / 6 * 7;
+					num++;
+				}
+				if (x === 10 || x === canvas.width - 10) {
+					angle = Math.PI - angle;
+				}
+				if (y === 10) {
+					angle = 2 * Math.PI - angle;
+				}
+				if (y === canvas.height + 10) {
+					clear();
+				}
+				init();
+			}
+
+			function clear() {
+				angle = Math.PI / 5;
+				x = 10;
+				y = 10;
+			}
+		</script>
+	</body>
+
+</html>

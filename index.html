@@ -1,0 +1,268 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>myd-demo</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta content="email=no" name="format-detection" />
+		<style>
+			body,
+			html,
+			div,
+			blockquote,
+			img,
+			label,
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			pre,
+			ul,
+			ol,
+			li,
+			dl,
+			dt,
+			dd,
+			form,
+			a,
+			fieldset,
+			input,
+			th,
+			tr,
+			td,
+			input,
+			select,
+			form {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				outline: none;
+			}
+			
+			html,
+			body {
+				font-family: "微软雅黑", Arial;
+				padding-bottom: 50px;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+			
+			input,
+			textarea,
+			img {
+				border: 0;
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0
+			}
+			
+			input,
+			button,
+			select,
+			textarea {
+				font-family: Tahoma, "宋体", Arial, Helvetica, Arial, sans-serif;
+				vertical-align: middle;
+				font-size: 100%;
+				margin: 0;
+			}
+			
+			em,
+			i {
+				font-style: normal;
+			}
+			
+			img {
+				vertical-align: middle;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			body {
+				background: url(bg.png) repeat;
+				color: #484441;
+				text-shadow: 1px 1px 1px #fff;
+			}
+			
+			.clr {
+				clear: both;
+			}
+			
+			.title {
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				font-size: 1.3rem;
+				background: #fff;
+				margin: 10px auto 0;
+				text-indent: 2rem;
+				color: #666;
+				border-bottom: 1px solid #ccc;
+				text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+				border-radius: 5px 5px 0 0;
+				cursor: pointer;
+			}
+			
+			.links {
+				width: 100%;
+				margin: 0 auto 0;
+				padding-left: 2rem;
+				display: none;
+			}
+			
+			.links li {
+				width: 80%;
+				margin: 2em;
+				transition: 1s;
+				-webkit-transition: 1s;
+			}
+			
+			.links li a {
+				color: #4D4F4C;
+				font-size: 1rem;
+				display: block;
+			}
+			
+			.links li:hover {
+				padding-left: 1rem;
+				font-size: 1rem;
+				color: #f60;
+			}
+			
+			.links li:hover a {
+				color: #f60;
+				font-size: 1rem;
+			}
+			
+			#list {
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="list">
+
+		</div>
+		<script>
+			var str = "",
+				data = [
+					[{
+						title: "一、JavaScript"
+					}, {
+						url: "https://weihf.github.io/my-demo/js/table",
+						title: "表格-隔行变色/添加和删除行"
+					}, {
+						url: "https://weihf.github.io/my-demo/js/countdown",
+						title: "倒数计时器"
+					}],
+					[{
+						title: "二、CSS3"
+					}, {
+						url: "https://weihf.github.io/my-demo/css3/chatBox",
+						title: "气泡聊天框"
+					}, {
+						url: "https://weihf.github.io/my-demo/css3/gear",
+						title: "齿轮旋转动画"
+					}, {
+						url: "https://weihf.github.io/my-demo/css3/3DCube",
+						title: "3D立方体"
+					}],
+					[{
+						title: "三、HTML5"
+					}, {
+						url: "https://weihf.github.io/my-demo/html5/video",
+						title: "视频播放器"
+					}, {
+						url: "https://weihf.github.io/my-demo/html5/drawing",
+						title: "画板"
+					}, {
+						url: "https://weihf.github.io/my-demo/html5/snowing",
+						title: "飘雪"
+					}, {
+						url: "https://weihf.github.io/my-demo/html5/localstorage-note",
+						title: "localstorage note"
+					}, {
+						url: "https://weihf.github.io/my-demo/html5/loading",
+						title: "canvas loading"
+					}],
+					[{
+						title: "四、Others"
+					}, {
+						url: "https://weihf.github.io/my-demo/others/balling",
+						title: "接球"
+					}, {
+						url: "https://weihf.github.io/my-demo/others/findDifference",
+						title: "大家来找茬"
+					}, {
+						url: "https://weihf.github.io/my-demo/others/baishuo",
+						title: "佰硕庄园"
+					}, {
+						url: "https://weihf.github.io/my-demo/others/golf",
+						title: "高尔夫"
+					},  {
+						url: "https://weihf.github.io/my-demo/others/mall",
+						title: "商城"
+					},  {
+						url: "https://weihf.github.io/my-demo/others/jqmobile-demo",
+						title: "jqmobile demo"
+					}, {
+						url: "https://github.com/weihf/gulp-template",
+						title: "My Gulp Template"
+					}]
+				];
+			for(var i = 0; i < data.length; i++) {
+				var items = data[i];
+				var sub = "";
+				for(var j = 0; j < items.length; j++) {
+					var son = items[j];
+					if(j == 0) {
+						sub += '<div class="title">' + son.title + '</div><ol class="links">';
+					} else {
+						sub += '<li><a href="' + son.url + '" target="_blank">' + son.title + '</a></li>';
+					}
+					if(j == items.length - 1) {
+						sub += '</ol>';
+					}
+				}
+				str += sub;
+				var list = document.getElementById("list");
+				list.innerHTML = str;
+				var title = list.getElementsByClassName("title");
+				var links = list.getElementsByClassName("links");
+				var tmp = -1;
+				var open = false;
+				for(var k = 0; k < title.length; k++) {
+					title[k].index = k;
+					title[k].onclick = function() {
+						for(var i = 0; i < title.length; i++) {
+							links[i].style.display = "none";
+						}
+						if(tmp == this.index && open) {
+							links[this.index].style.display = "none";
+							open = false;
+						} else {
+							links[this.index].style.display = "block";
+							open = true;
+						}
+						tmp = this.index;
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

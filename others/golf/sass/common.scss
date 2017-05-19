@@ -1,0 +1,440 @@
+/* ------------------------------------------------------------------------------    
+    Author: weihf
+    Description: weihf resume   
+    1.  CSS Reset
+    2.  header
+    3.  common section
+    4.  tech
+    5.  work experience
+    6.  project
+    7.  aboutMe
+    8.  footer
+    9.  forIE.html
+---------------------------------------------------------------------------------
+/* 1. CSS Reset
+-------------------------------------------------------------------------------*/
+
+$browser-default-font-size: 16px !default;
+@function pxTorem($px){
+    @return $px / $browser-default-font-size * 1rem;
+}
+$white:#fff;
+html {
+    font-size:62.5%;
+}
+body {
+    text-align: center;
+    margin: 0 auto;
+    color: $white;
+    font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
+    font-size: pxTorem(16px);    
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    -webkit-print-color-adjust: exact;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: inherit;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+p,
+ul,
+ol {
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+a,
+a:visited {
+    text-decoration: none;
+    color: #08c;
+}
+a:hover {
+    text-decoration: underline;
+}
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: '.';
+}
+/*----------------------------------------------------
+ 2. common style
+------------------------------------------------------*/
+.mainPage {
+    overflow: hidden;
+    max-width: 640px;
+    margin: 0 auto; 
+}
+.section {
+    padding:pxTorem(20px);
+}
+/*----------------------------------------------------
+ 3. header
+------------------------------------------------------*/
+.header {
+    background: -webkit-linear-gradient(#1b1a20, #393638);
+    background: -o-linear-gradient(#1b1a20, #393638);
+    background: -moz-linear-gradient(#1b1a20, #393638);
+    background: linear-gradient(#1b1a20, #393638);
+    position: relative;
+    height: pxTorem(70px);
+    line-height: pxTorem(70px);
+    padding: 0 pxTorem(10px);
+}
+.header h1 {
+    color: #fff;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: static;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: pxTorem(40px);
+}
+
+.back {
+    background:url(../img/back.png) left center no-repeat;
+    position: absolute;
+    cursor: pointer;
+    width: pxTorem(100px);
+    height: pxTorem(70px);
+    position: absolute;
+    left: pxTorem(20px);
+    color: $white;    
+}
+.menu {
+    background:url(../img/menu.png) center center no-repeat;
+    position: absolute;
+    right: pxTorem(20px);
+    top: 0;
+    width: pxTorem(50px);
+    height: pxTorem(70px);
+    cursor: pointer;
+    z-index: 999;
+}
+/*----------------------------------------------------
+ 4. banner
+------------------------------------------------------*/
+.banner img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+/*----------------------------------------------------
+ 5. complimentary
+------------------------------------------------------*/
+.complimentary {
+    background: #c12cd3;
+    padding-bottom: pxTorem(50px);
+}
+.borderBg {
+    background: url(../img/yellow-frame.png) top center no-repeat;
+}
+.comTitle {
+    border: 2px solid #f2ff23;
+    background: -webkit-linear-gradient(#e8f321, #fdc905);
+    background: -o-linear-gradient(#e8f321, #fdc905);
+    background: -moz-linear-gradient(#e8f321, #fdc905);
+    background: linear-gradient(#e8f321, #fdc905);
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    min-height: pxTorem(70px);
+    overflow: hidden;
+}
+.comTitle p {
+    font-size: pxTorem(28px);
+    color: #00008e;
+    vertical-align: middle;
+    margin:pxTorem(10px) pxTorem(20px);
+}
+.leftIcon {
+    background: url(../img/complimentaryTitleL.png) center center no-repeat;
+    width: pxTorem(50px);
+}
+.rightIcon {
+    background: url(../img/complimentaryTitleR.png) center center no-repeat;
+    width: pxTorem(50px);
+}
+.imglist {
+    overflow: hidden;
+    margin: pxTorem(20px) auto;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+}
+.imglist li a {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: pxTorem(10px);
+}
+.imglist p {
+    color: #333333;
+    line-height: pxTorem(46px);
+    font-size: pxTorem(20px);
+    text-align: center;
+}
+.rob {
+    background: #fc2216;
+    font-size: pxTorem(22px);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    line-height: pxTorem(50px);
+    padding: 0 pxTorem(10px);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.cap p {
+    color: #f2ff23;
+    font-size: pxTorem(30px);
+    text-align: center;
+    position: relative;
+    top: 30px;
+    background: #c12cd3;width: 50%;
+    margin: 0 auto;
+}
+@media screen and (max-width:639px) {
+    .imglist {
+        
+    justify-content: center;
+    }
+   .imglist li {
+       width: pxTorem(230px);
+   }
+   .imglist li a.party img {
+    max-width: pxTorem(248px);
+}
+.imglist li a.coach img {
+    max-height: pxTorem(76px);
+}
+   .imglist li a.gift img  {
+    max-height: 138px;
+}
+.imglist li a {
+    margin: pxTorem(20px);
+}
+   .rob {
+    background: #fc2216;
+    font-size: pxTorem(20px);
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: pxTorem(10px);
+    line-height: pxTorem(50px);
+    padding: 0 pxTorem(10px);
+    border-bottom-left-radius: pxTorem(5px);
+    border-bottom-right-radius: pxTorem(5px);
+}
+.cap p {
+    font-size: pxTorem(20px);
+    width: 90%;
+}
+}
+/*----------------------------------------------------
+ 6. induction
+------------------------------------------------------*/
+.induction {
+    background: #ae0f52;
+}
+.headTitle p {
+    color: #fff;
+    font-size: pxTorem(40px);
+    text-align: center;
+}
+.section > header > ul 
+{
+    
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    margin: pxTorem(20px);
+}
+.section header {
+    margin-bottom: pxTorem(10px);
+}
+.section header li img {
+    margin-top:  pxTorem(30px);
+}
+.section > header > p {
+    color: #fff;
+    text-align: center;
+    font-size: pxTorem(26px);
+    font-weight: normal;
+}
+.induction .main ul:first-of-type {
+    
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+}
+.induction .main li {
+    border: 4px solid #ff6fe6;
+    border-radius: 5px;
+    color: #fff;
+}
+.ballArm {
+    margin-bottom:pxTorem(10px);
+    background: url(../img/lb1.png) right bottom no-repeat
+}
+.vcoach {
+    clear: both;
+    overflow: hidden;
+}
+.induction .main li h3 {
+    font-weight: bold;
+    font-size: pxTorem(30px);
+}
+.induction .main li p {
+    font-size:  pxTorem(26px);
+}
+.induction .main li a {
+    color: #ffdc52;
+    font-size: pxTorem(26px);
+    cursor: pointer;
+}
+.section footer {
+    padding: pxTorem(30px) 0;
+}
+.section footer p {
+    color: #fff;
+    text-align: center;
+    margin-bottom: pxTorem(30px);
+    font-size: pxTorem(30px);
+}
+.btns {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+}
+.orangeBtn {
+    background: #fb5442;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: pxTorem(220px);
+    height: pxTorem(60px);
+    line-height: pxTorem(60px);
+    font-size: pxTorem(30px);
+    text-align: center;
+    cursor: pointer;
+}
+.orangeBtn:hover,
+.whiteBtn:hover {
+    text-decoration: none;
+}
+.whiteBtn {
+    background: #ae0f52;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: block;
+    width: pxTorem(218px);
+    height: pxTorem(58px);
+    line-height: pxTorem(58px);
+    font-size: pxTorem(30px);
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width:639px) {
+    .headTitle p {
+    font-size: pxTorem(36px);
+    text-align: center;
+}
+    .section header ul li {
+        width: 20%;
+    }
+    .section header ul li img {
+        max-width: 100%;
+    }
+    .section header ul li:nth-of-type(2){
+        width: 60%;
+    }
+    .btns {
+        justify-content: space-between;
+    }
+}
+/*----------------------------------------------------
+ 7. bigParty
+------------------------------------------------------*/
+.bigParty {
+    background: url(../img/background-run.jpg) #580394 bottom center no-repeat;
+}
+.main fieldset {
+    border-radius:pxTorem(10px);
+    color: #fff;
+    margin: pxTorem(30px) auto;
+}
+.bigParty .headTitle p {
+    color: #f6ff00;
+}
+.main fieldset legend {
+    font-size: pxTorem(30px);
+    text-align: center;
+    padding: 0 pxTorem(20px);
+}
+.main fieldset div {
+    padding: pxTorem(20px);
+    font-size: pxTorem(24px);
+    text-align: left;
+}
+/*----------------------------------------------------
+ 8.  international coaches
+------------------------------------------------------*/
+.intcoaches {
+    background: url(../img/background.jpg) #6d016e top center no-repeat;
+}

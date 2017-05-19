@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas loading</title>
+		<style>
+			body {
+				text-align: center;
+			}
+			
+			canvas {
+				margin: 100px auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas width="100" height="100">您的浏览器不支持canvas标签，请升级浏览器</canvas>
+		<script>
+			var canvas = document.getElementsByTagName("canvas")[0],
+				context = canvas.getContext("2d"),
+				angle = 0;
+			setInterval("rotate()", 20);
+
+			function drawCircle(angle) {
+				context.lineWidth = 8;
+				for (var i = 10; i < 361; i++) {
+					var color = [0, 181, 255, i / 360];
+					context.beginPath();
+					context.strokeStyle = "rgba(" + color.join(",") + ")"
+					context.arc(50, 50, 30, (i - 1 + angle) * Math.PI / 180, (i + angle) * Math.PI / 180);
+					context.stroke();
+				}
+			}
+
+			function rotate() {
+				context.clearRect(0, 0, 400, 400);
+				angle += 10;
+				if (angle > 360) {
+					angle = 0;
+				}
+				drawCircle(angle);
+			}
+		</script>
+	</body>
+
+</html>

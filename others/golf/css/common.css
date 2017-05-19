@@ -1,0 +1,648 @@
+/* ------------------------------------------------------------------------------    
+    Author: weihf
+    Description: golf 
+    1.  CSS Reset
+    2.  common style
+    3.  header
+    4.  banner
+    5.  complimentary
+    6.  induction
+    7.  bigParty
+    8.  international coaches
+    9.  popup
+    10. 40ie.html
+---------------------------------------------------------------------------------
+/* 1. CSS Reset
+-------------------------------------------------------------------------------*/
+
+html {
+	font-size: 62.5%;
+}
+body {
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+	font-family: 'microsoft yahei', Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-webkit-print-color-adjust: exact;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: inherit;
+}
+ul,
+ol {
+	list-style-type: none;
+}
+p,
+ul,
+ol {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+img {
+	border: none;
+	vertical-align: top;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: #08c;
+}
+a:hover {
+	text-decoration: underline;
+}
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after {
+	display: block;
+	overflow: hidden;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	content: '.';
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+/*----------------------------------------------------
+ 2. common style
+------------------------------------------------------*/
+
+.mainPage {
+	overflow: hidden;
+	max-width: 640px;
+	margin: 0 auto;
+}
+.section {
+	padding: 1.25rem;
+}
+/*----------------------------------------------------
+ 3. header
+------------------------------------------------------*/
+
+.header {
+	background: -webkit-linear-gradient(#1b1a20, #393638);
+	background: -o-linear-gradient(#1b1a20, #393638);
+	background: -moz-linear-gradient(#1b1a20, #393638);
+	background: linear-gradient(#1b1a20, #393638);
+	position: relative;
+	height: 4.375rem;
+	line-height: 4.375rem;
+	padding: 0 0.625rem;
+}
+.header h1 {
+	color: #fff;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: static;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 2.5rem;
+}
+.back {
+	background: url(../img/back.png) left center no-repeat;
+	background-size: 20%;
+	position: absolute;
+	cursor: pointer;
+	width: 6.25rem;
+	height: 4.375rem;
+	position: absolute;
+	left: 1.25rem;
+	color: #fff;
+	font-size: 1.7rem;
+}
+.menu {
+	background: url(../img/menu.png) center center no-repeat;
+	background-size: 50%;
+	position: absolute;
+	right: 1.25rem;
+	top: 0;
+	width: 4.375rem;
+	height: 4.375rem;
+	cursor: pointer;
+	z-index: 999;
+}
+/*----------------------------------------------------
+ 4. banner
+------------------------------------------------------*/
+
+.banner img {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+/*----------------------------------------------------
+ 5. complimentary
+------------------------------------------------------*/
+
+.complimentary {
+	background: #c12cd3;
+	padding-bottom: 3.125rem;
+}
+.borderBg {
+	background: url(../img/yellow-frame.png) top center no-repeat;
+}
+.comTitle {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	max-width: 300px;
+	margin: 0 auto;
+	color: #00008e;
+	padding: 1.7rem;
+}
+.imglist {
+	overflow: hidden;
+	margin: 1.25rem auto;
+	margin-top: 3rem;
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+}
+.imglist li a {
+	cursor: pointer;
+	text-decoration: none;
+	display: block;
+	background: #fff;
+	position: relative;
+	overflow: hidden;
+	margin: 0.625rem;
+}
+.imglist p {
+	color: #333333;
+	line-height: 2.875rem;
+	font-size: 1.25rem;
+	text-align: center;
+}
+.rob {
+	background: #fc2216;
+	font-size: 1.375rem;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	line-height: 3.125rem;
+	padding: 0 0.625rem;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.cap {
+	padding-bottom: 4rem;
+}
+.cap p {
+	color: #f2ff23;
+	font-size: 1.6rem;
+	text-align: center;
+	position: relative;
+	top: 30px;
+	background: #c12cd3;
+	width: 60%;
+	margin: 0 auto;
+}
+@media screen and (max-width: 639px) {
+	.imglist {
+		justify-content: center;
+		margin-top: 4rem;
+	}
+	.imglist li {
+		width:50%;
+	}
+	.imglist li a.party img {
+		max-width: 15.5rem;
+	}
+	.imglist li a.coach img {
+		max-height: 4.75rem;
+	}
+	.imglist li a.gift img {
+		max-height: 138px;
+	}
+	.imglist p　{
+		font-size: 1rem;
+	}
+	.rob {
+		background: #fc2216;
+		font-size: 1.25rem;
+		color: #fff;
+		position: absolute;
+		top: 0;
+		right: 0.625rem;
+		line-height: 3.125rem;
+		padding: 0 0.625rem;
+		border-bottom-left-radius: 0.3125rem;
+		border-bottom-right-radius: 0.3125rem;
+	}
+	.cap p {
+		font-size: 1.5rem;
+		width: 90%;
+	}
+}
+@media screen and (min-width:640px ) {
+	.borderBg {
+		padding: 0 5rem;
+	}
+}
+/*----------------------------------------------------
+ 6. induction
+------------------------------------------------------*/
+
+.induction {
+	background: #ae0f52;
+}
+.induction .main {
+	margin-top: 1.875rem;
+}
+.headTitle p {
+	color: #fff;
+	font-size: 2.5rem;
+	text-align: center;
+}
+.section > header > ul {
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	margin: 1.25rem;
+}
+.section header {
+	margin-bottom: 0.625rem;
+}
+.section header li img {
+	margin-top: 1.875rem;
+}
+.section > header > p {
+	color: #fff;
+	text-align: center;
+	font-size: 1.625rem;
+	font-weight: normal;
+}
+.induction .main ul:first-of-type {
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: space-between;
+}
+.induction .main li {
+	border: 4px solid #ff6fe6;
+	border-radius: 5px;
+	color: #fff;
+	width: 46%;
+	clear: both;
+	overflow: hidden;
+}
+.induction .main li img {
+	max-width: 100%;
+	float: right;
+}
+.induction .main li.vcoach {
+	width: 99%;
+	margin-top: 10px;
+}
+.induction .main li.ballArm {
+	float: left;
+}
+.induction .main li.glove {
+	float: right;
+}
+.vcoach {
+	clear: both;
+	overflow: hidden;
+}
+.section footer {
+	padding: 1.875rem 0;
+}
+.section footer p {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 1.875rem;
+	font-size: 1.875rem;
+}
+.btns {
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.twoBtns {
+	display: block;
+	overflow: hidden;
+}
+.twoBtns li {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	text-align: center;
+}
+.twoBtns li a {
+	width: 90%;
+}
+.orangeBtn {
+	background: #fb5442;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	width: 13.75rem;
+	height: 3.75rem;
+	line-height: 3.75rem;
+	font-size: 1.875rem;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 auto;
+	text-align: center;
+}
+.orangeBtn:hover,
+.whiteBtn:hover {
+	text-decoration: none;
+}
+.whiteBtn {
+	background: #ae0f52;
+	color: #fff;
+	border-radius: 5px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	display: block;
+	width: 13.625rem;
+	height: 3.625rem;
+	line-height: 3.625rem;
+	font-size: 1.875rem;
+	text-align: center;
+	cursor: pointer;
+	margin: 0 auto;
+}
+@media screen and (max-width: 639px) {
+	.headTitle p {
+		font-size: 2.25rem;
+		text-align: center;
+	}
+	.section header ul li {
+		width: 20%;
+	}
+	.section header ul li img {
+		max-width: 100%;
+	}
+	.section header ul li:nth-of-type(2) {
+		width: 60%;
+	}
+	.btns {
+		justify-content: space-between;
+	}
+}
+/*----------------------------------------------------
+ 7. bigParty
+------------------------------------------------------*/
+
+.bigParty {
+	background: url(../img/background-run.jpg) #580394 bottom center no-repeat;
+}
+.main fieldset {
+	border-radius: 0.625rem;
+	color: #fff;
+	margin: 1.875rem auto;
+}
+.bigParty .headTitle p {
+	color: #f6ff00;
+}
+.main fieldset legend {
+	font-size: 1.875rem;
+	text-align: center;
+	padding: 0 1.25rem;
+	color: #fff;
+}
+.main fieldset div {
+	padding: 1.25rem;
+	font-size: 1.5rem;
+	text-align: left;
+}
+/*----------------------------------------------------
+ 8.  international coaches
+------------------------------------------------------*/
+
+.intcoaches {
+	background: url(../img/background.jpg) #6d016e top center no-repeat;
+}
+.section footer .pspace p {
+	margin-bottom: 1rem;
+}
+.freeapply,
+.freeapply:visited {
+	margin: 2rem auto;
+	color: #fff;
+}
+/*----------------------------------------------------
+9.  popup
+------------------------------------------------------*/
+
+.dialog {
+	position: relative;
+}
+#over,
+#secApply,
+.applyForm {
+	display: none;
+}
+.applyForm {
+	background: #ffffff;
+	position: absolute;
+	bottom: 0;
+	border-radius: 5px;
+	z-index: 999;
+	left: 50%;
+	max-width: 320px;
+	margin-left: -150px;
+}
+#secApply {
+	background: #ffffff;
+	position: absolute;
+	bottom: 0;
+	border-radius: 5px;
+	z-index: 999;
+	color: #333;
+}
+.isee {
+	margin: 2rem auto;
+}
+.dialog #secApply p {
+	text-align: left;
+	color: #333;
+	padding: 2rem;
+	font-size: 1.4rem;
+}
+.closeWrap {
+	text-align: right;
+	clear: both;
+	overflow: hidden;
+	padding: 10px;
+}
+.close {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: #e5e5e5;
+	display: block;
+	margin-right: 0;
+	float: right;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+.close:hover {
+	background: #fb5442;
+}
+.close img {
+	vertical-align: middle;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#over {
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: silver;
+}
+.popForm {
+	color: #333;
+}
+.popForm section {
+	clear: both;
+	overflow: hidden;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 0.6rem 0;
+}
+.popTitle {
+	color: #fb5442;
+	font-size: 30px;
+	margin-top: -10px;
+	text-align: center;
+}
+.aside {
+	font-size: 12px;
+	margin: 1rem 0;
+}
+.citylist li {
+	display: inline-block;
+	float: left;
+	margin: 0 5px 10px 5px;
+}
+.citylist li a {
+	display: block;
+	font-size: 14px;
+	color: #333;
+	line-height: 26px;
+	padding: 0 1rem;
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.citylist li a:hover,
+.citylist li a:visited {
+	text-decoration: none;
+	background: #0ec9be;
+	color: #fff;
+}
+.leftLable {
+	text-align: right;
+	font-size: 14px;
+	color: #333;
+	width: 25%;
+	float: left;
+	padding-right: 1%;
+}
+.rightForm {
+	float: right;
+	width: 73%;
+	text-align: left;
+}
+.redstar {
+	color: red;
+	padding-right: 5px;
+}
+.tel {
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+	line-height: 26px;
+	width: 90%;
+}
+.txtarea {
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+	width: 90%;
+}
+.apply,
+.apply:visited,
+.apply:hover {
+	display: block;
+	background: #fb5442;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 1.875rem;
+	border-radius: 5px;
+	margin: 10px auto;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+/*----------------------------------------------------
+  10. 40ie.html
+------------------------------------------------------*/
+
+.forIE {
+	background: #333;
+	color: #f6f6f6;
+	line-height: 30px;
+	font-size: 18px;
+}
+.container {
+	margin: 30px;
+}
+.forIE p {
+	text-indent: 2rem;
+}
+.forIE strong {
+	color: #f60;
+	font-size: 24px;
+}

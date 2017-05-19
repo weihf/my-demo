@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="reset.css" />
+		<style>
+			.wrap {
+				margin: 100px auto;
+				text-align: center;
+				width: 600px;
+			}
+			
+			.wrap #table {
+				margin: 10px auto;
+				font-family: "microsoft yahei";
+				color: #333;
+				width: 100%;
+			}
+			
+			#table th {
+				text-align: center;
+				font-size: 14px;
+				background: #EFEFEF;
+			}
+			
+			#table th,
+			#table td {
+				line-height: 30px;
+				border: 1px solid #ddd;
+			}
+			
+			#table tr.even td {
+				background: #dff0d8;
+			}
+			
+			#table tr.hover td {
+				background: #fcf8e3;
+			}
+			
+			#table tr.on td {
+				background: #d9edf7;
+			}
+			
+			a {
+				color: blue;
+				cursor: pointer;
+			}
+			
+			input[type=button] {
+				background: goldenrod;
+				color: #fff;
+				border: none;
+				padding: 5px 20px;
+				border-radius: 5px;
+				cursor: pointer;
+				line-height: 20px;
+			}
+			
+			.search {
+				overflow: hidden;
+				clear: both;
+			}
+			
+			.search li {
+				float: left;
+				padding-right: 20px;
+			}
+			
+			input[type=text] {
+				border: 1px solid #EFEFEF;
+				width: 150px;
+				line-height: 28px;
+				padding: 0 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<ul class="search">
+				<li><label>姓名：</label><input type="text" id="names" /></li>
+				<li><input type="button" value="添加" id="add" /></li>
+			</ul>
+			<table border="1" width="50%" id="table">
+				<thead>
+					<tr>
+						<th>学号</th>
+						<th>姓名</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>001</td>
+						<td>张三</td>
+						<td><a href="javascript:;" onclick="del(this)">删除</a></td>
+						<!--在删除按钮上添加点击事件  -->
+					</tr>
+
+					<tr>
+						<td>002</td>
+						<td>李四</td>
+						<td><a href="javascript:;" onclick="del(this)">删除</a></td>
+						<!--在删除按钮上添加点击事件  -->
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--在添加按钮上添加点击事件  -->
+	</body>
+	<script type="text/javascript">
+		var table = document.getElementsByTagName("tbody")[0];
+		var tr = document.getElementsByTagName("tr");
+		var num = 2;
+		changColor(tr);
+
+		function changColor() {
+			var tr = document.getElementsByTagName("tr");
+			for (var i = 0; i < tr.length; i++) {
+				if (i % 2) {
+					tr[i].className = "even";
+				}
+				if (i > 0) {
+					tr[i].index = i;
+					var k = 0;
+					var tmp = "";
+					tr[i].onmouseover = function() {
+						if (this.index == k || this.className.search(/on/) != -1) {
+							return;
+						}
+						tmp = this.className;
+						this.className = "hover";
+					};
+					tr[i].onmouseout = function() {
+						if (this.index == k || this.className.search(/on/) != -1) {
+							return;
+						}
+						this.className = tmp;
+					};
+					tr[i].onclick = function(e) {
+						k = this.index;
+						if (!+this.getAttribute('data-on')) {
+							this.setAttribute('data-on', 1);
+							this.className = 'on';
+						} else {
+							if (this.index % 2 != 0) {
+								this.className = 'even';
+							}
+							this.className = this.className.replace(/on/g, '');
+							this.setAttribute('data-on', 0);
+						}
+					}
+				}
+			}
+		}
+
+		function add() {
+			var names = document.getElementById("names");
+			var cr = document.createElement("tr");
+			var cd1 = document.createElement("td");
+			var cd2 = document.createElement("td");
+			var cd3 = document.createElement("td");
+			num++;
+			cd1.innerHTML = "00" + num;
+			cd2.innerHTML = names.value;
+			cd3.innerHTML = "<a href='#' onclick='del(this)'>删除</a>";
+			if (names.value) {
+				table.appendChild(cr);
+				cr.appendChild(cd1);
+				cr.appendChild(cd2);
+				cr.appendChild(cd3);
+				names.value = "";
+				changColor(tr);
+			} else {
+				alert("请输入姓名");
+			}
+			names.focus();
+		};
+		var btn = document.getElementById("add");
+		btn.onclick = function() {
+			add();
+			changColor();
+		};
+
+		function del(obj) {
+			var tr = obj.parentNode.parentNode;
+			tr.parentNode.removeChild(tr);
+		};
+	</script>
+
+</html>

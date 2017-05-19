@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: url(../js/countdown/mesh.png);
+			}
+			
+			.wrap {
+				-webkit-perspective: 800;
+				perspective: 800;
+				-webkit-transform-origin: 50% 50%;
+				transform-origin: 50% 50%;
+				overflow: hidden;
+			}
+			
+			.boxes {
+				-webkit-transform-style: preserve-3d;
+				position: relative;
+				-webkit-animation: rotate 5s ease infinite;
+				-moz-animation: rotate 5s ease infinite;
+				height: 500px;
+			}
+			
+			@-webkit-keyframes rotate {
+				0% {
+					-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+					-webkit-transform-origin: center center;
+				}
+				100% {
+					-webkit-transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+					-webkit-transform-origin: center center;
+				}
+			}
+			
+			.box {
+				width: 200px;
+				height: 200px;
+				margin: 0 auto;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -100px;
+				text-align: center;
+				color: #fff;
+				line-height: 200px;
+				font-size: 40px;
+				font-family: "宋体";
+			}
+			
+			#box1 {
+				background: forestgreen;
+				-webkit-transform: rotatey(90deg) translatez(-100px);
+				-moz-transform: rotatey(90deg) translatez(-100px);
+			}
+			
+			#box2 {
+				background: gold;
+				-webkit-transform: rotatey(90deg) translatez(100px);
+				-moz-transform: rotatey(90deg) translatez(100px);
+			}
+			
+			#box3 {
+				background: blue;
+				-webkit-transform: rotatex(90deg) translatez(100px);
+				-moz-transform: rotatex(90deg) translatez(100px);
+			}
+			
+			#box4 {
+				background: blueviolet;
+				-webkit-transform: rotatex(90deg) translatez(-100px);
+				-moz-transform: rotatex(90deg) translatez(-100px);
+			}
+			
+			#box5 {
+				background: brown;
+				-webkit-transform: translatez(-100px);
+				-moz-transform: translatez(-100px);
+			}
+			
+			#box6 {
+				background: lightcoral;
+				-webkit-transform: translatez(100px);
+				-moz-transform: translatez(100px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="boxes">
+				<div class="box" id="box1">1</div>
+				<div class="box" id="box2">2</div>
+				<div class="box" id="box3">3</div>
+				<div class="box" id="box4">4</div>
+				<div class="box" id="box5">5</div>
+				<div class="box" id="box6">6</div>
+			</div>
+		</div>
+	</body>
+
+</html>

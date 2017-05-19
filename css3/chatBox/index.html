@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>气泡聊天框</title>
+		<link rel="stylesheet" href="../reset.css" />
+		<style>
+			.wrap {
+				width: 400px;
+				margin: 50px auto;
+				color: #fff;
+				font-size: 18px;
+			}
+			
+			.triangle {
+				position: relative;
+				padding: 20px;
+				background: lightblue;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				margin-left: 15px;
+			}
+			
+			.triangle:after {
+				content: "";
+				position: absolute;
+				left: -15px;
+				top: 50%;
+				border-width: 15px 15px 15px 0;
+				border-style: solid;
+				border-color: transparent lightblue;
+				display: block;
+				width: 0;
+				margin-top: -15px;
+			}
+			
+			.triangle-border {
+				color: #333;
+				position: relative;
+				padding: 20px;
+				background: white;
+				border: 3px solid lightcoral;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				margin-left: 15px;
+			}
+			
+			.triangle-border:before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: -35px;
+				border-width: 35px 16px 0 16px;
+				border-style: solid;
+				border-color: lightcoral transparent;
+				display: block;
+				width: 0;
+				margin-left: -16px;
+			}
+			
+			.triangle-border:after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				bottom: -30px;
+				border-width: 30px 12px 0 12px;
+				border-style: solid;
+				border-color: #fff transparent;
+				display: block;
+				width: 0;
+				margin-left: -12px;
+			}
+			
+			.triangle-oblique {
+				color: #333;
+				position: relative;
+				padding: 20px;
+				background: gold;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				margin-left: 15px;
+			}
+			
+			.triangle-oblique:before {
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				right: 80px;
+				border-width: 0 0 30px 50px;
+				border-style: solid;
+				border-color: transparent gold;
+				display: block;
+				width: 0;
+			}
+			
+			.triangle-oblique:after {
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				right: 110px;
+				border-width: 0 0 30px 20px;
+				border-style: solid;
+				border-color: transparent #fff;
+				display: block;
+				width: 0;
+			}
+			
+			.oval {
+				color: #333;
+				position: relative;
+				padding: 80px 20px;
+				background: yellowgreen;
+				-webkit-border-top-left-radius: 220px 120px;
+				-webkit-border-top-right-radius: 220px 120px;
+				-webkit-border-bottom-right-radius: 220px 120px;
+				-webkit-border-bottom-left-radius: 220px 120px;
+				-moz-border-radius: 220px / 120px;
+				border-radius: 220px / 120px;
+				margin-left: 15px;
+			}
+			
+			.oval:before {
+				content: "";
+				position: absolute;
+				bottom: -20px;
+				left: 50px;
+				width: 30px;
+				height: 30px;
+				background: yellowgreen;
+				-webkit-border-radius: 30px;
+				-moz-border-radius: 30px;
+				border-radius: 30px;
+			}
+			
+			.oval:after {
+				content: "";
+				position: absolute;
+				bottom: -30px;
+				left: 30px;
+				width: 15px;
+				height: 15px;
+				background: yellowgreen;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<p class="triangle">等边三角形聊天框</p><br>
+			<p class="triangle-oblique">不等边斜三角形聊天框</p><br><br>
+			<p class="triangle-border">等腰边框三角形聊天框</p><br><br>
+			<p class="oval">不规则椭圆聊天框</p><br><br>
+		</div>
+	</body>
+
+</html>

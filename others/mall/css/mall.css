@@ -1,0 +1,361 @@
+/*我的商城*/
+
+.head-img {
+	height: 5rem;
+	width: 100%;
+	background: lightsalmon;
+	text-align: center;
+	color: #FFF
+}
+
+.head-img .my-img {
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 4rem;
+	border: .125rem solid #FFF;
+	box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.2);
+	margin-top: .5rem;
+	margin-bottom: .25rem;
+	display: inline-block;
+	overflow: hidden;
+	background-size: cover;
+	background: url(../img/defaul.png) center center no-repeat;
+}
+
+.head-img p {
+	font-size: .75rem;
+	line-height: 1.5rem;
+}
+
+.mallContent {
+	background: #f2f2f2;
+}
+
+.module-group {
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.module-group a {
+	background-color: #fff;
+	display: block;
+	position: relative;
+	line-height: 1.1rem;
+	color: #333;
+	font-size: .7rem;
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 0;
+	padding: .575rem 7% .575rem .5rem;
+	background: url(../img/rightarrow.png) #fff 96% center no-repeat;
+	background-size: .325rem;
+}
+
+.module-group a img {
+	float: left;
+	height: 1.1rem;
+	margin-right: .25rem;
+}
+
+.common-wrapper {
+	margin-bottom: .5rem;
+}
+
+.order-nav {
+	background: #fff;
+	overflow: hidden;
+	clear: both;
+}
+
+.order-nav a {
+	display: block;
+	float: left;
+	width: 50%;
+	padding: 1.8rem 0 .25rem 0;
+	background: url(../img/pay.png) no-repeat center .4rem;
+	background-size: 1.2rem;
+	line-height: .6rem;
+	color: #4d525d;
+	text-align: center;
+	font-size: .6rem;
+	box-shadow: 1px 0 0 rgba(200, 200, 200, 0.6);
+}
+
+.mall-footer {
+	font-size: .6rem;
+	line-height: .9rem;
+	color: #848689;
+	padding: .5rem;
+	clear: both;
+	overflow: hidden;
+	background: #fff;
+}
+
+.mall-footer a {
+	display: block;
+	width: 33.33%;
+	float: left;
+	text-align: center;
+	box-shadow: 1px 0 0 rgba(200, 200, 200, 0.6);
+}
+
+
+/*我的订单*/
+
+.order-list {
+	margin: .5rem 0;
+}
+
+.order-pie {
+	background: #fff;
+	margin: 0 0 .5rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.order-title {
+	padding: 0 .5rem;
+	height: 1.65rem;
+	line-height: 1.65rem;
+	color: #242424;
+	font-size: .6rem;
+	border-bottom: #e5e5e5 1px solid;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#f3f3f3');
+	background: -ms-linear-gradient(top, #f8f8f8, #f3f3f3);
+	background: -moz-linear-gradient(top, #f8f8f8, #f3f3f3);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f8f8f8), to(#f3f3f3))
+}
+
+.order-content {
+	padding: .5rem;
+	position: relative;
+	background: url(../img/rightarrow.png) #fff 96% center no-repeat;
+	background-size: .325rem;
+}
+
+.order-link {
+	display: block;
+	min-height: 3.45rem;
+	color: #555;
+	text-decoration: none;
+	background: 0 0;
+	-webkit-tap-highlight-color: transparent;
+	font-size: .6rem;
+}
+
+.order-link img {
+	position: absolute;
+	top: .5rem;
+	left: .5rem;
+	width: 2.75rem;
+	height: 3.45rem;
+}
+
+.order-info {
+	margin: 0 2rem 0 3.25rem;
+	line-height: .9rem;
+}
+
+.order-btns {
+	position: absolute;
+	left: 3.75rem;
+	top: 2.5rem;
+}
+
+.order-btn {
+	margin-right: .4rem;
+	color: #555;
+	background-color: #fff;
+	display: inline-block;
+	padding: .25rem .6rem;
+	margin-bottom: 0;
+	font-size: .7rem;
+	line-height: 1rem;
+	color: #333;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid #e6e6e6
+}
+
+
+/*订单详情*/
+
+.order-detail ul {
+	margin: .5rem;
+	color: #333;
+	font-size: .6rem;
+	line-height: 1.1rem;
+}
+
+.order-detail ul em {
+	font-style: normal;
+}
+
+.order-con {
+	padding: .4rem;
+	line-height: 1.1rem;
+	font-size: .7rem;
+}
+
+.order-con dd {
+	position: relative;
+	padding: 0 0 .4rem;
+	margin-bottom: .4rem;
+	border-bottom: #ccc 1px dashed;
+	clear: both;
+	overflow: hidden;
+}
+
+.order-con dd a img {
+	width: 2.75rem;
+	height: 3.45rem;
+}
+
+.commodity {
+	padding: .5rem 0 0 .25rem;
+	overflow: hidden;
+	width: 9.75rem;
+	line-height: 1.1rem;
+	font-size: .6rem;
+}
+
+.commodity-name {
+	padding-right: .5rem;
+	font-size: .6rem;
+	color: #000;
+	line-height: .8rem;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
+.com-price {
+	padding-top: .5rem;
+}
+
+.btn-bar {
+	height: 2rem;
+	background: #eaedf1;
+	font-size: .7rem;
+	padding: .7rem 1rem 0 .1rem;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #e0e0e0;
+}
+
+.order-wrap {
+	padding-bottom: 2.65rem;
+}
+
+
+/*收货地址列表*/
+
+.add-list ul {
+	margin-bottom: .2rem;
+	background-color: #fff;
+	position: relative;
+}
+
+.add-list ul li {
+	padding: .5rem .5rem 1.6rem .5rem;
+	line-height: 1.5rem;
+	position: relative;
+	list-style-type: none;
+	font-weight: 400;
+	font-size: .6rem;
+	border-bottom: 1px solid #ddd;
+}
+
+.add-list ul li p {
+	line-height: .9rem;
+}
+
+.add-name {
+	margin-right: .6rem;
+}
+
+.add-btn {
+	font-size: .6rem;
+	padding: .1rem .4rem;
+	border: none;
+	color: #157efa;
+}
+
+.add-btns {
+	position: absolute;
+	right: .1rem;
+}
+
+.add-new {
+	text-align: center;
+}
+
+.add-new .order-btn {
+	margin: 1rem .5rem;
+	padding: .4rem;
+	width: 80%;
+}
+
+
+/*新增收获地址*/
+
+.address－form > form {
+	background: #fff;
+	margin: .5rem auto;
+}
+
+.address-form-item {
+	margin-left: .5rem;
+	background-color: #fff;
+	font-size: .8rem;
+	position: relative;
+	height: 2rem;
+	line-height: 2rem;
+	overflow: hidden;
+	padding-right: .5rem;
+}
+
+.address-form-item > label {
+	width: 3rem;
+	overflow: hidden;
+	position: absolute;
+	text-align: left;
+}
+
+.address-form-item input {
+	line-height: 2rem;
+}
+
+.address-form-item input:not([type=checkbox]):not([type=radio]) {
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+.address-form-item input,
+.address-form-item textarea {
+	width: 100%;
+	-webkit-appearance: none;
+	border: 0;
+	background: 0 0;
+	padding: 0 .4rem 0 3rem;
+	outline: 0;
+	line-height: 1rem
+}
+
+.address-form-item-textarea {
+	height: 4rem;
+}
+
+.address-form-item-textarea textarea {
+	margin-top: .8rem;
+	border: 0;
+	line-height: .36rem;
+	height: 3.2rem;
+}

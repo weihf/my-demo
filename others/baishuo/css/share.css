@@ -1,0 +1,245 @@
+/*basic style*/
+
+html {
+	font-size: 62.5%;
+	/*10px*/
+	
+	font-family: Helvetica;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	font-size: 1.6rem;
+	font-size: 16px;
+	line-height: 26px;
+}
+.wrap {
+	padding: 1rem 1.4rem;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.tl {
+	text-align: left;
+}
+.tc {
+	text-align: center;
+}
+.tr {
+	text-align: right;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+li {
+	list-style: none;
+}
+/*green*/
+
+.green {
+	background: #a3c74e;
+}
+.container {
+	margin: 0 auto;
+	text-align: center;
+}
+.topImg img {
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.wealthBg {
+	background: url(../img/wealth.png) left center no-repeat;
+	background-size: 4rem;
+	padding-left: 5rem;
+	padding-top: 1rem;
+}
+.wealthTxt {
+	filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid: DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+	-ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid: DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+	background: #fff;
+	background: -moz-linear-gradient(top, #a3c74e, rgba(255, 255, 255, 0.3));
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a3c74e), to(rgba(255, 255, 255, 0.3)));
+	padding: 1rem;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: left;
+}
+.wealthTxt p {
+	color: #517006;
+	font-size: 1.4rem;
+	text-align: left;
+	font-weight: bold;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 30px #fff;
+}
+.wealthIntro {
+	font-size: 1.6rem;
+	padding: 1rem 0;
+}
+.wealthIntro p {
+	font-size: 1.4rem;
+	text-indent: 2rem;
+	text-align: left;
+	color: #fff;
+	line-height: 1.8rem;
+}
+.wx {
+	color: #fff;
+	font-size: 1.4rem;
+	text-align: center;
+	padding-top: 1rem;
+}
+.paddingTop0 {
+	padding-top: 0;
+}
+/*red*/
+
+.red {
+	background: #e8392f;
+}
+.box {
+	padding: 1rem;
+	color: #fff;
+	margin: 2rem auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.light {
+	background: #ed6d52;
+	font-size: 2rem;
+}
+.dark {
+	background: #d32520;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.reward li {
+	list-style: none;
+	font-size: 1.2rem;
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+}
+.reward li p {
+	float: left;
+	width: 67%;
+	text-align: left;
+}
+.reward li span {
+	float: left;
+	display: block;
+	width: 33%;
+	text-align: left;
+}
+/*white*/
+
+.white {
+	background: #fff;
+	color: #bb9037;
+}
+.vipTitle {
+	font-size: 3.2rem;
+	margin: 2rem 0;
+}
+.vipTxt {
+	text-align: left;
+	text-indent: 2rem;
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+.orange {
+	background: #ec6d52;
+}
+.yellow {
+	background: #bb9037;
+}
+.phone {
+	background: url(../img/phone.png) left center no-repeat;
+	padding-left: 5rem;
+	margin-left: 2rem;
+	text-align: left;
+}
+.alarm {
+	background: url(../img/alarm.png) left center no-repeat;
+	background-size: 3rem;
+	text-align: left;
+	padding-left: 4rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	min-height: 3.5rem;
+	height: auto !important;
+	height: 3.5rem;
+}
+.member {
+	font-size: 1.2rem;
+}
+.member li {
+	width: 100%;
+	font-size: 1.4rem;
+}
+.arrowBottom {
+	background: url(../img/arrowBottom.png) no-repeat;
+	width: 2rem;
+	height: 2rem;
+	display: block;
+	margin: 0.5rem 0 0 3rem;
+}
+.letter {
+	background: #fff;
+	width: 2rem;
+	height: 2rem;
+	-moz-border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+	display: inline-block;
+	color: #ec6d52;
+	text-align: center;
+	line-height: 2rem;
+	margin: 0 2rem;
+	font-weight: bold;
+}
+.level {
+	text-align: left;
+}
+.wx {
+	width: 100%;
+	text-align: center;
+}
+.wx img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+@media screen and (max-width: 321px) {
+	.wealthBg {
+		background-size: 2.2rem;
+		padding-left: 3.2rem;
+	}
+	.wealthTxt p {
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+}
+@media screen and (min-width: 374px) {
+	.dark {
+		font-size: 2rem;
+	}
+	.alarm {
+		font-size: 1.4rem;
+	}
+}

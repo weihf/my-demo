@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5画板</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/draw.css" />
+	</head>
+
+	<body>
+		<header id="header">
+			<h1>HTML5画板</h1>
+		</header>
+		<section id="content">
+			<dl id="tool">
+				<dd>
+					<h2>工具</h2>
+					<div id="means">
+						<a href="#" onclick="drawBrush()" id="drawBrush">笔刷</a>
+						<a href="#" onclick="drawPaint()" id="drawPaint">背景色</a>
+						<a href="#" onclick="drawEraser()" id="eraser">橡皮擦</a>
+						<br />
+						<a href="#" onclick="drawText()" id="texts">文字</a>
+					</div>
+				</dd>
+				<dd>
+					<h2>形状</h2>
+					<div id="shape">
+						<a href="#" onclick="drawArc()" id="arc">圆</a>
+						<a href="#" onclick="drawRect()" id="rects">方</a>
+						<a href="#" onclick="drawPoly()" id="poly">三角形</a><br>
+						<a href="#" onclick="drawArcfill()" id="arcfill">实心圆</a>
+						<a href="#" onclick="drawRectfill()" id="rectfill">实心方</a></div>
+				</dd>
+				<dd>
+					<h2>线宽</h2>
+					<div id="lineW">
+						<a href="#" id="lineW1" onclick="setLineWidth(0)">S</a>
+						<a href="#" id="lineW2" onclick="setLineWidth(1)">M</a>
+						<a href="#" id="lineW3" onclick="setLineWidth(2)">L</a>
+						<a href="#" id="lineW4" onclick="setLineWidth(3)">XL</a>
+					</div>
+				</dd>
+				<dd>
+					<h2>颜色</h2>
+					<div id="color">
+						<a href="#" id="red" onclick="setColor(this,0)">红</a>
+						<a href="#" id="green" onclick="setColor(this,1)">绿</a>
+						<a href="#" id="blue" onclick="setColor(this,3)">蓝</a>
+						<a href="#" id="white" onclick="setColor(this,4)">白</a>
+						<br />
+						<a href="#" id="black" onclick="setColor(this,5)">黑</a>
+						<a href="#" id="pink" onclick="setColor(this,6)">粉</a>
+						<a href="#" id="purple" onclick="setColor(this,7)">紫</a>
+						<a href="#" id="cyan" onclick="setColor(this,8)">青</a>
+						<a href="#" id="orange" onclick="setColor(this,9)">橙</a>
+					</div>
+				</dd>
+				<dd>
+					<h2>图像</h2>
+					<div id="img">
+						<a href="#" id="clearimg">清空画板</a>
+						<div id="img">
+				</dd>
+			</dl>
+			<canvas id="canvas" width="900" height="400">您的浏览器不支持canvas标签，请升级浏览器</canvas>
+		</section>
+		<footer id="footer"></footer>
+		<script type="text/javascript" src="js/draw.js"></script>
+	</body>
+
+</html>

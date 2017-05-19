@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>myMall</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/search-list.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="flex">
+				<a href="index.html" class="header-back"></a>
+				<div class="search t_left">
+					<div class="text-box">
+						<input class="search-input" type="text" placeholder="搜索商品/店铺">
+					</div>
+					<input type="submit" class="submit" value="" />
+				</div>
+				<a href="#" class="style-show"></a>
+		</header>
+		<section class="search-list">
+			<nav class="nav">
+				<a class="current">综合</a>
+				<a>销量</a>
+				<a>价格</a>
+				<a>筛选</a>
+			</nav>
+			<div class="product-list">
+				<ul>
+					<li>
+						<a href="product-detail.html">
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a href="product-detail.html">
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a href="product-detail.html">
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a href="product-detail.html">
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a href="product-detail.html">
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a>
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a>
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+					<li>
+						<a>
+							<img src="img/like1.jpg" />
+						</a>
+						<div class="info-bar">
+							<div class="pro-title">南极人保暖内衣上衣+裤子加绒加厚蓄热黄金甲双层情侣款 XL 红色女款</div>
+							<span class="e-price">￥98.00</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<script type="text/javascript" src="js/zepto-1.1.6.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+			$(function() {
+				$(".style-show").on("touchend", function() {
+					$(this).toggleClass("box");
+					$(".product-list").toggleClass("product-box");
+				})
+			})
+		</script>
+	</body>
+
+</html>

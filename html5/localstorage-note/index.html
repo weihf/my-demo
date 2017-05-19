@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5LocalStorage-Note</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="note.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="w980 clearfix">
+				<h1 class="title">HTML5LocalStorage-Note</h1>
+				<div class="fr lh60">
+					<input id="txt" type="text" placeholder="请输入您想做的事" />
+					<button id="btn" value="添加" type="button" />添加
+					<button id="deleteBtn" value="全部删除" type="button" />全部删除
+				</div>
+			</div>
+		</header>
+		<section class="clearfix content w980">
+			<div class="fl box boxBg">
+				<div class="head">
+					<h2>进行中</h2>
+					<label id="tNum">0</label>
+				</div>
+				<ul id="todoUl" class="listUl"></ul>
+			</div>
+			<div class="fr box boxBg">
+				<div class="head">
+					<h2>已完成</h2>
+					<label id="dNum">0</label>
+				</div>
+				<ul id="doneUl" class="listUl"></ul>
+			</div>
+		</section>
+		<footer>
+			
+		</footer>
+		<script type="text/javascript" src="note.js"></script>
+	</body>
+
+</html>

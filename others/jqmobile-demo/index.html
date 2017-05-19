@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />		
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />		
+		<title>myJQM</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet" href="css/JPictureRotary.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="js/JPictureRotary.js"></script>
+
+	</head>
+
+	<body>
+		<div data-role="page" id="indexPage">
+			<script>
+				$("#indexPage").on("pageinit", function() {
+					$("#pictureContainer").JPictureRotary({
+						animationSpeed: "slow",
+						delay: 3,
+					});
+				})
+			</script>
+			<div data-role="header" data-position="fixed">
+				<a href="#leftpanel" data-role="button" data-icon="bullets" data-iconpos="notext">菜单</a>
+				<h1>myJQM</h1>
+				<a href="login.html" data-role="button" data-icon="user" data-iconpos="notext">登录</a>				
+				<div data-role="navbar">
+					<ul>
+						<li><a class="ui-btn-active">今日新品</a></li>
+						<li><a>最后清仓</a></li>
+						<li><a>即将上线</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="main" class="ui-content" id="indexMain">
+				<div style="width: 100%;">
+				<ul id="pictureContainer">
+					<li>
+						<a><img src="img/image1.png" /></a>
+					</li>
+					<li>
+						<a><img src="img/image2.png" /></a>
+					</li>
+					<li>
+						<a><img src="img/image3.png" /></a>
+					</li>
+					<li>
+						<a><img src="img/image4.png" /></a>
+					</li>
+					<li>
+						<a><img src="img/image4.png" /></a>
+					</li>
+				</ul>
+				<ul data-role="listview" data-inset="true" data-icon="false" class="zw_list">
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>
+					<li>
+						<a href="#"><img src="img/2.png" />
+							<h2>文字新闻</h2>
+							<p>文字新闻文字新闻文字新闻文字新闻文字新闻</p>
+						</a>
+					</li>					
+				</ul>
+				</div>
+			</div>
+			<div data-role="panel" id="leftpanel" data-position="left" data-display="push">
+				<ul data-role="listview">
+					<li><a href="index.html" class="ui-btn ui-btn-icon-left ui-icon-home">首页</a></li>
+					<li><a href="#" class="ui-btn ui-btn-icon-left ui-icon-cloud">服装</a></li>
+					<li><a href="#" class="ui-btn ui-btn-icon-left ui-icon-recycle">母婴</a></li>
+					<li><a href="#" class="ui-btn ui-btn-icon-left ui-icon-eye">美妆</a></li>
+					<li><a href="#" class="ui-btn ui-btn-icon-left ui-icon-heart">居家</a></li>
+					<li><a href="#" class="ui-btn ui-btn-icon-left ui-icon-location">旅游</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

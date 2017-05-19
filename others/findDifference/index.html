@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../reset.css" />
+		<link rel="stylesheet" href="css/finding.css" />
+	</head>
+
+	<body>
+		<div id="loading">
+			<div id="loadBg">
+				<h2>欢迎来找茬</h2>
+				<a id="loadStart">Play</a>
+			</div>
+		</div>
+		<div id="main">
+			<h1 class="title">找茬</h1>
+			<div id="progress">
+				<img class="clockImg" src="img/clock.png" />
+				<div id="progressBox">
+					<div id="progressBar">
+					</div>
+				</div>
+				<div><span id="pointNum"></span>/4</div>
+				<div id="music">
+					<audio id="audioMusic" autoplay="autoplay" loop="loop">
+					  	<source src="img/finding.wav" type="audio/mpeg">
+						<embed src="img/finding.wav" />
+					</audio>
+				</div>
+			</div>
+			<div id="scene">
+				<div class="topImg"></div>
+				<div class="bottomImg"></div>
+				<b id="maskBg"> 开始游戏吧！</b>
+			</div>
+			<a class="button button-orange">
+				<span id="startBtn"></span>
+			</a>
+		</div>
+		<script type="text/javascript" src="js/imgData.js"></script>
+		<script type="text/javascript" src="js/finding.js"></script>
+	</body>
+
+</html>
