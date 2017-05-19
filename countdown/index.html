@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>倒计时</title>
+		<link rel="stylesheet" href="../reset.css" />
+		<style>
+			body {
+				background: url(mesh.png) repeat;
+			}
+			
+			.container {
+				width: 300px;
+				margin: 100px auto;
+				padding: 30px;
+				background: url(bg.png) repeat;
+				box-shadow: 0px 0px 10px #fff;
+				border-radius: 5px;
+				color: #666;
+				text-align: center;
+				font-size: 16px;
+			}
+			
+			.controls a {
+				padding: 0 10px;
+				color: royalblue;
+				margin: 10px;
+				cursor: pointer;
+			}
+			
+			#timer {
+				width: 100%;
+				height: 100px;
+				background: url(mesh.png) repeat;
+				margin: 30px auto;
+				color: #fff;
+				font-size: 30px;
+				line-height: 100px;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="setting">
+				<span>时长：</span>
+				<input type="text" value="1" id="setTime" /> 分
+			</div>
+			<div id="timer">
+				<span id="minutes">00</span>:<span id="second">00</span>
+			</div>
+			<div class="controls">
+				<a id="start">开始</a>
+				<a id="stop">暂停</a>
+				<a id="resets">重置</a>
+			</div>
+		</div>
+		<script>
+			var setTime = $("setTime");
+			var timer = $("timer");
+			var start = $("start");
+			var stop = $("stop");
+			var resets = $("resets");
+			var minutes = $("minutes");
+			var second = $("second");
+			var totalSec = setTime.value * 60;
+			var count = null;
+			setTime.onkeyup = function() {
+				setTime.value = setTime.value.replace(/[^\d]/g, ""); //查找任何不是数字的字符，替换为空 
+				totalSec = setTime.value * 60;
+			}
+			start.onclick = function() {
+				clearInterval(count);
+				controls(this.id);
+				count = setInterval("startCount()", 1000);
+			}
+
+			function startCount() {
+				totalSec--;
+				if (totalSec <= 0) {
+					clearInterval(count);
+				}
+				if (totalSec >= 0) {
+					var minNum = parseInt(totalSec / 60);
+					minutes.innerHTML = (minNum < 10) ? ("0" + minNum) : (minNum);
+					var secNum = parseInt(totalSec % 60);
+					second.innerHTML = (secNum < 10) ? ("0" + secNum) : secNum;
+				}
+			}
+			stop.onclick = function() {
+				stopCount();
+			}
+
+			function stopCount() {
+				clearInterval(count);
+			}
+			resets.onclick = function() {
+				resetCount();
+				clearInterval(count);
+			}
+
+			function resetCount() {
+				clearInterval(count);
+				minutes.innerHTML = second.innerHTML = "00";
+				setTime.value = 1;
+			}
+
+			function controls(btn) {
+				switch (btn) {
+					case "start":
+						startCount();
+						break;
+					case "stop":
+						stopCount();
+						break;
+					case "resets":
+						resetCount();
+				}
+			}
+
+			function $(id) {
+				return document.getElementById(id);
+			}
+
+			function getByClass(oParent, iClass) {
+				var aEle = oParent.getElementsByTagName("*");
+				var arr = [];
+				for (var i = 0; i < aEle.length; i++) {
+					if (aEle[i].className == iClass) {
+						arr.push(aEle[i]);
+					}
+				}
+				return arr;
+			}
+		</script>
+	</body>
+
+</html>
