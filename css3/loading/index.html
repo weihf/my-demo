@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.loading {
+				position: relative;
+				width: 0;
+				margin: 100px auto;
+				text-align: center;
+			}
+			
+			.loading div {
+				background-color: lightcoral;
+				width: 4px;
+				height: 35px;
+				-webkit-border-radius: 2px;
+				-moz-border-radius: 2px;
+				border-radius: 2px;
+				margin: 2px;
+				-webkit-animation-fill-mode: both;
+				-moz-animation-fill-mode: both;
+				-o-animation-fill-mode: both;
+				animation-fill-mode: both;
+				position: absolute;
+				width: 5px;
+				height: 15px;
+			}
+			
+			.loading>div:nth-child(1) {
+				top: 20px;
+				left: 0;
+				-webkit-animation: loading 1.2s 0.12s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.12s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.12s infinite ease-in-out;
+				animation: loading 1.2s 0.12s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(2) {
+				top: 13.63636px;
+				left: 13.63636px;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-animation: loading 1.2s 0.24s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.24s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.24s infinite ease-in-out;
+				animation: loading 1.2s 0.24s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(3) {
+				top: 0;
+				left: 20px;
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);
+				-webkit-animation: loading 1.2s 0.36s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.36s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.36s infinite ease-in-out;
+				animation: loading 1.2s 0.36s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(4) {
+				top: -13.63636px;
+				left: 13.63636px;
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+				-webkit-animation: loading 1.2s 0.48s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.48s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.48s infinite ease-in-out;
+				animation: loading 1.2s 0.48s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(5) {
+				top: -20px;
+				left: 0;
+				-webkit-animation: loading 1.2s 0.6s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.6s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.6s infinite ease-in-out;
+				animation: loading 1.2s 0.6s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(6) {
+				top: -13.63636px;
+				left: -13.63636px;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				-webkit-animation: loading 1.2s 0.72s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.72s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.72s infinite ease-in-out;
+				animation: loading 1.2s 0.72s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(7) {
+				top: 0;
+				left: -20px;
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);
+				-webkit-animation: loading 1.2s 0.84s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.84s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.84s infinite ease-in-out;
+				animation: loading 1.2s 0.84s infinite ease-in-out;
+			}
+			
+			.loading>div:nth-child(8) {
+				top: 13.63636px;
+				left: -13.63636px;
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+				-webkit-animation: loading 1.2s 0.96s infinite ease-in-out;
+				-moz-animation: loading 1.2s 0.96s infinite ease-in-out;
+				-o-animation: loading 1.2s 0.96s infinite ease-in-out;
+				animation: loading 1.2s 0.96s infinite ease-in-out;
+			}
+			
+			@-webkit-keyframes loading {
+				50% {
+					opacity: 0.3;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-moz-keyframes loading {
+				50% {
+					opacity: 0.3;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@-o-keyframes loading {
+				50% {
+					opacity: 0.3;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			@keyframes loading {
+				50% {
+					opacity: 0.3;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="loading">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+
+</html>
