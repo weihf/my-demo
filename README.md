@@ -18,6 +18,8 @@
 
 - [3D立方体](https://weihf.github.io/my-demo/css3/3DCube)
 
+- [line-spin-fade-loading](https://weihf.github.io/my-demo/css3/loading)
+
 ### HTML5
 
 - [视频播放器 ](https://weihf.github.io/my-demo/html5/video)
