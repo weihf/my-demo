@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">			
+			.app-loading {
+				background-color: lightblue;
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 9999;
+				-webkit-transition: all 0.3s;
+				-o-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+				width: 100%;
+				height: 100%;
+				display: table;
+			}
+			
+			.app-loading p {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+			
+			.app-loading-hide {
+				left: 120%;
+				bottom: 120%;
+				opacity: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="app-loading">
+			<p>即将进入页面...</p>
+		</div>
+		<div>
+			页面内容
+		</div>
+		<script type="text/javascript">
+			const start_time = new Date().getTime();
+			const end_time = new Date().getTime();
+			const diffTime = end_time - start_time;
+			const timer = setTimeout(() => {
+				clearTimeout(timer)
+				document.querySelector('.app-loading').className += ' app-loading-hide'
+			}, diffTime > 2000 ? 0 : 2000 - diffTime)
+		</script>
+	</body>
+
+</html>

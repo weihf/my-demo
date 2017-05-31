@@ -8,6 +8,8 @@
 
 - [倒数计时器 ](https://weihf.github.io/my-demo/js/countdown)
 
+- [启动页 ](https://weihf.github.io/my-demo/js/start-page)
+
 ### CSS3
 
 - [气泡聊天框](https://weihf.github.io/my-demo/css3/chatBox)
@@ -28,7 +30,7 @@
 
 - [canvas loading ](https://weihf.github.io/my-demo/html5/loading)
 
-### Others
+### 综合
 
 - [接球](https://weihf.github.io/my-demo/others/balling)
 
